@@ -21,7 +21,7 @@ namespace CaseAutoService.Controllers
         /// <param name="ManufactererAuto">Производитель</param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult CaseAuto(double MinPrice, double MaxPrice, string ManufactererAuto)
+        public IActionResult CaseAuto(double MinPrice, double MaxPrice, double MinPower, double MaxPower, string ManufactererAuto)
         {
             return View();
         }
