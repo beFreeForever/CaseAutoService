@@ -13,14 +13,13 @@ namespace CaseAutoService.Working
     /// </summary>
     public static class RequestFilter
     {
-        public static List<Auto> GetFilterRequest(List<Auto> AutoList, double MinPrice, double MaxPrice, Manufacturer Manufacterer, BodyType BodyType, DriveUnit DriveUnit, double MinPower, double MaxPower)
+        public static List<Auto> GetFilterRequest(List<Auto> AutoList, double MinPrice, double MaxPrice, string BodyType, string DriveUnit, double MinPower, double MaxPower)
         {
             List<Auto> FilterListAuto = new List<Auto>();
             foreach (var Auto in AutoList)
             {
                 if((Auto.Price >= MinPrice && Auto.Price <= MaxPrice) && 
                    (Auto.Power >= MinPower && Auto.Power <=MaxPower) &&
-                   Auto.Manufacturer == Manufacterer &&
                    Auto.BodyType == BodyType &&
                    Auto.DriveUnit == DriveUnit)
                 {

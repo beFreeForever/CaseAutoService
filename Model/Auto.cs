@@ -15,30 +15,30 @@ namespace CaseAutoService.Model
         /// <summary>
         /// Название машины
         /// </summary>
-        public string Name;
+        public string Name { get; set; }
         /// <summary>
         /// Производитель
         /// </summary>
-        public Manufacturer Manufacturer;
+        public string Manufacturer { get; set; }
         /// <summary>
         /// Цена
         /// </summary>
-        public double Price;
+        public double Price { get; set; }
         /// <summary>
         /// Мощность
         /// </summary>
-        public double Power;
+        public double Power { get; set; }
         /// <summary>
         /// Тип привода
         /// </summary>
-        public DriveUnit DriveUnit;
+        public string DriveUnit { get; set; }
         /// <summary>
         /// Кузов
         /// </summary>
-        public BodyType BodyType;
+        public string BodyType { get; set; }
         /// <summary>
         /// Ссылка на авто
         /// </summary>
-        public string LinkToCar;
+        public string LinkToCar { get; set; }
     }
 }
