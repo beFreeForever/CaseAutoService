@@ -1,7 +1,10 @@
 ﻿using CaseAutoService.Enumerations;
 using CaseAutoService.Model;
 using CaseAutoService.Working;
+using CaseAutoService.WorkingClasses.Parsers;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
+using SelectAutoServise.WorkingClasses.Parsers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,25 +32,34 @@ namespace CaseAutoService.Controllers
         [HttpPost]
         public IActionResult SelectAuto(string ManufactererAuto, string BodyTypeAuto)
         {
-            List<Auto> AutoListTemp = new List<Auto>();
-            AutoListTemp.Add(new Auto
-            {
-                Name = "Nissan",
-                BodyType = BodyTypeAuto,
-                DriveUnit = "FourWheelDrive",
-                Price = 3000,
-                Manufacturer = ManufactererAuto,
-                Power = 123123,
-                LinkToCar = "vk.com"
-            });
-            //будут классы запросов
-            // AutoList = RequestFilter.GetFilterRequest();
-            return RedirectToAction("AnswerOfRequestAuto", "CaseAuto", new { AutoList = AutoListTemp });
+            return RedirectToAction("AnswerOfRequestAuto", "CaseAuto", new { ManufactererAuto = ManufactererAuto, BodyTypeAuto = BodyTypeAuto });
         }
 
-        public IActionResult AnswerOfRequestAuto(List<Auto> AutoList)
+        public IActionResult AnswerOfRequestAuto(string ManufactererAuto, string BodyTypeAuto)
         {
-            ViewBag.List = new List<Auto>(AutoList);
+            //ViewBag.List = new List<Auto>(AutoList);
+            //ViewBag.List = new List<Auto>();
+            switch (ManufactererAuto)
+            {
+                case "Mersedes":
+                    {
+                        IRequestParser Parser = new MersedesParser();
+                        ViewBag.List = new List<Auto>(Parser.GetData());
+                        break;
+                    }                   
+                case "Nissan":
+                    {
+                        IRequestParser Parser = new NissanParser();
+                        ViewBag.List = new List<Auto>(Parser.GetData());
+                        break;
+                    }
+                case "BMW":
+                    {
+                        IRequestParser Parser = new BMWParser();
+                        ViewBag.List = new List<Auto>(Parser.GetData());
+                        break;
+                    }
+            }         
             return View();
         }
     }

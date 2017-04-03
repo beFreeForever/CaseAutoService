@@ -1,94 +1,21 @@
 ﻿@{
     Layout = "_Layout";
 }
-    
-@*<div class="col-md-8 banner-right">
-    <div class="sap_tabs">
-        <div class="Page-info">
-            <!--Имя главной страницы-->
-            <h2>Main Page Parser</h2>
-        </div>
-        <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-            <div class="resp-tabs-container">
-                    <div class="reservation">
-                        <ul>
-                            <!--Класс модели -->
-                            <li class="span1_of_1 left model">
-                                <h5>model</h5>
-                                <div class="model">
-                                    <select id="model" name="Manufacturer" onchange="choose_model(this.value)" class="frm-field required">
-                                        <option value="null">Nissan</option>
-                                        <option value="null">BMW</option>
-                                        <option value="null">Mercedes</option>
-                                    </select>
-                                </div>
-                            </li>
-                            <!---->
-                            <!--Класс модели кузнова-->
-                            <li class="span1_of_1 left Manufacture">
-                                <h5>Manufacture</h5>
-                                <div class="Manufacture">
-                                    <select id="Manufacture" name="BodyType" onchange="change_Manufacture(this.value)" class="frm-field required">
-                                        <option value="null">Внедорожник</option>
-                                        <option value="null">Грузовик</option>
-                                        <option value="null">Купе</option>
-                                        <option value="null">Седан</option>
-                                        <option value="null">Хэтчбек</option>
-                                        <option value="null">Универсал</option>
-                                    </select>
-                                </div>
-                            </li>
-                            <!---->
-                            <!--Форма для чего-то ещё-->
-                            <li class="span1_of_1 smf_else">
-                                <h5>smf_else</h5>
-                                <div class="smf_else">
-                                    <select id="smf_else" onchange="change_smf_else(this.value)" class="frm-field required">
-                                        <option value="null">smf_else=1</option>
-                                        <option value="null">smf_else=2</option>
-                                    </select>
-                                </div>
-                            </li>
-                            <!---->
-                        </ul>
-                    </div>
-                    <div class="reservation">
-                        <!--Кнопка-->
-                        <ul>
-                            <li class="span1_of_3">
-                                <div class="return_btn">
-                                    <form>
-                                        <input type="submit" value="Search" />
-                                    </form>
-                                </div>
-                            </li>
-                            <div class="clearfix"></div>
-                        </ul>
-                        <!---->
-                    </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="clearfix"> </div>*@
 
 <form method="post">
-    <ul>
         <!--Класс модели -->
-        <li class="span1_of_1 left model">
             <h5>model</h5>
             <div class="model">
                 <select id="model" name="ManufactererAuto" onchange="choose_model(this.value)" class="frm-field required">
-                    <option value="Nissan">Nissan</option>
                     <option value="BMW">BMW</option>
-                    <option value="Mercedes">Mercedes</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Mersedes">Mercedes</option>
                 </select>
             </div>
-        </li>
+
         <!---->
         <!--Класс модели кузнова-->
-        <li class="span1_of_1 left Manufacture">
+        @*<li class="span1_of_1 left Manufacture">
             <h5>Manufacture</h5>
             <div class="Manufacture">
                 <select id="BodyType" name="BodyType" onchange="change_Manufacture(this.value)" class="frm-field required">
@@ -99,7 +26,7 @@
                     <option value="Hatchback">Hatchback</option>
                 </select>
             </div>
-        </li>
+        </li>*@
         <!---->
         <!--Форма для чего-то ещё-->
         @*<li class="span1_of_1 smf_else">
@@ -112,8 +39,8 @@
             </div>
         </li>*@
         <!---->
-    </ul>
         <!--Кнопка-->
+    <br />
      <p>
          <input type="submit" value="Search" />              
      </p>                   

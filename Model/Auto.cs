@@ -25,20 +25,8 @@ namespace CaseAutoService.Model
         /// </summary>
         public double Price { get; set; }
         /// <summary>
-        /// Мощность
-        /// </summary>
-        public double Power { get; set; }
-        /// <summary>
-        /// Тип привода
-        /// </summary>
-        public string DriveUnit { get; set; }
-        /// <summary>
         /// Кузов
         /// </summary>
         public string BodyType { get; set; }
-        /// <summary>
-        /// Ссылка на авто
-        /// </summary>
-        public string LinkToCar { get; set; }
     }
 }

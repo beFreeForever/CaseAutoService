@@ -8,9 +8,11 @@
     <tr>
         <td>Name</td>
         <td>Manufacturer</td>
+        <td>BodyType</td>
+        <td>Price</td>
         @foreach (var Auto in ViewBag.List)
         {
-            <tr><td>@Auto.Name</td> <td>@Auto.Manufacturer</td> </tr>
+            <tr><td>@Auto.Name</td> <td>@Auto.Manufacturer</td> <td>@Auto.BodyType</td> <td>@Auto.Price руб.</td>  </tr>
         }
     </table>
 
