@@ -6,10 +6,10 @@
 <table class="table">
    
     <tr>
-        <td>Name</td>
-        <td>Manufacturer</td>
-        <td>BodyType</td>
-        <td>Price</td>
+        <td><strong>Name</strong></td>
+        <td><strong>Manufacturer</strong></td>
+        <td><strong>BodyType</strong></td>
+        <td><strong>Price</strong></td>
         @foreach (var Auto in ViewBag.List)
         {
             <tr><td>@Auto.Name</td> <td>@Auto.Manufacturer</td> <td>@Auto.BodyType</td> <td>@Auto.Price руб.</td>  </tr>

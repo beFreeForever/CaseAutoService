@@ -4,43 +4,15 @@
 
 <form method="post">
         <!--Класс модели -->
-            <h5>model</h5>
-            <div class="model">
-                <select id="model" name="ManufactererAuto" onchange="choose_model(this.value)" class="frm-field required">
-                    <option value="BMW">BMW</option>
-                    <option value="Nissan">Nissan</option>
-                    <option value="Mersedes">Mercedes</option>
-                </select>
-            </div>
-
-        <!---->
-        <!--Класс модели кузнова-->
-        @*<li class="span1_of_1 left Manufacture">
-            <h5>Manufacture</h5>
-            <div class="Manufacture">
-                <select id="BodyType" name="BodyType" onchange="change_Manufacture(this.value)" class="frm-field required">
-                    <option value="Wagon">Wagon</option>
-                    <option value="Van">Van</option>
-                    <option value="Coupe">Coupe</option>
-                    <option value="Sedan">Sedan</option>
-                    <option value="Hatchback">Hatchback</option>
-                </select>
-            </div>
-        </li>*@
-        <!---->
-        <!--Форма для чего-то ещё-->
-        @*<li class="span1_of_1 smf_else">
-            <h5>smf_else</h5>
-            <div class="smf_else">
-                <select id="smf_else" onchange="change_smf_else(this.value)" class="frm-field required">
-                    <option value="null">smf_else=1</option>
-                    <option value="null">smf_else=2</option>
-                </select>
-            </div>
-        </li>*@
-        <!---->
-        <!--Кнопка-->
-    <br />
+     <h5>Select manufacterer auto</h5>
+         <div class="model">
+             <select id="model" name="ManufactererAuto" onchange="choose_model(this.value)" class="frm-field required">
+                 <option value="BMW">BMW</option>
+                 <option value="Nissan">Nissan</option>
+                 <option value="Mersedes">Mercedes</option>
+             </select>
+        </div>
+        <br />
      <p>
          <input type="submit" value="Search" />              
      </p>                   
